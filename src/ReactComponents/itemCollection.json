@@ -1,0 +1,404 @@
+{
+  "items": [
+    {
+      "id": "gown1",
+      "description": "ethnicWear1",
+      "price": 1200,
+      "category": "clothes",
+      "subCategory": "ethnicWear",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=1nd3OBntdMFT7p-Udss6yvCPDmR2Aqg16",
+        "https://drive.google.com/uc?export=view&id=1Ru9Xdhs9HnOBKW1G-E4KXnFoUN5VnaYY",
+        "https://drive.google.com/uc?export=view&id=1aH-2XQg2HkOH0yUv8W0_ga53owV8-dZE",
+        "https://drive.google.com/uc?export=view&id=1HYDZT_nZSh1XBjc8fNIEHTPi-mA8wLZH",
+        "https://drive.google.com/uc?export=view&id=1bOblLM4A1pmA5tsaAT2lsXsbgZuKDSh2"
+      ]
+    },
+    {
+      "id": "saree_1001",
+      "description": "Women pink net saree with white pearl work",
+      "price": 1500,
+      "sellprice": 7500,
+      "category": "clothes",
+      "subCategory": "ethnicWear",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=1JRYkjR2p2xB4M_DrN7D9SD8HG_XI_WJL",
+        "https://drive.google.com/uc?export=view&id=1JRccpr8-083p6JdupCwPzrE8z6TUz0yI",
+        "https://drive.google.com/uc?export=view&id=1a0ZCUaC2VvvVyl4m-9jwobjyHB6Ef5RG",
+        "https://drive.google.com/uc?export=view&id=1zNQxfKafA7gSuFRgUlHw1ebkLLNjXgLS",
+        "https://drive.google.com/uc?export=view&id=1U7wuIiClKtzY6ROB7c77tlrw2pWKUIUQ"
+      ]
+    },
+    {
+      "id": "saree_1002",
+      "description": "Women purple net saree with white pearl work",
+      "price": 1400,
+      "sellprice": 7000,
+      "category": "clothes",
+      "subCategory": "ethnicWear",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=14L82HT0h0TCHBaQJRi19U1VkAFSdlB7c",
+        "https://drive.google.com/uc?export=view&id=1ijUyq1chDju9ufpfblHmVk6qzS6M5xT2",
+        "https://drive.google.com/uc?export=view&id=1ekO8jF1d6YEVUrTNpemyx7MDgb_dV3Y9"
+      ]
+    },
+    {
+      "id": "saree_1003",
+      "description": "Women green Georgette saree with black sequin Lace detail",
+      "price": 500,
+      "sellprice": 4000,
+      "category": "clothes",
+      "subCategory": "ethnicWear",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=1Cz3tBJRqffo00x3weFxRSldsT392ONiN/view",
+        "https://drive.google.com/uc?export=view&id=1VU7oAYLy1mslyFGqNGdgM8LVfUoau-jU/view",
+        "https://drive.google.com/uc?export=view&id=1S554fr8EvjuhtHbxXobIz6Q5s7Bzsnxp/view"
+      ]
+    },
+    {
+      "id": "saree_1004",
+      "description": "Women designer printed Georgette saree with red thread work border",
+      "price": 500,
+      "sellprice": 4000,
+      "category": "clothes",
+      "subCategory": "ethnicWear",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=1vztbCDhY2XAoIV-xSzuzNgN1NpgCfPZT",
+        "https://drive.google.com/uc?export=view&id=1Fixw61gkuXnr5whpPEgd3VcWSEQhfycb"
+      ]
+    },
+    {
+      "id": "saree_1005",
+      "description": "Women designer Golden Georgette saree with Satin look shimmer border",
+      "price": 700,
+      "sellprice": 5000,
+      "category": "clothes",
+      "subCategory": "ethnicWear",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=19q_k-juNw_nZhTDbGxeXFm0gMf1GKHwh",
+        "https://drive.google.com/uc?export=view&id=11nEghcq4hjWpAOvlmbM7Aeq6kqxftOhp",
+        "https://drive.google.com/uc?export=view&id=11nEghcq4hjWpAOvlmbM7Aeq6kqxftOhp"
+      ]
+    },
+    {
+      "id": "saree_1006",
+      "description": "Women ready to wear Green saree with Grey embroidered yoke and shaded duppatta",
+      "price": 2100,
+      "sellprice": 14000,
+      "category": "clothes",
+      "subCategory": "ethnicWear",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=1q8MWGIrJbTJE1CjeSf5oTPhrYSrsHBio",
+        "https://drive.google.com/uc?export=view&id=16vC65cHbyAf7sZPmEwqy-27QR-wVRkGQ",
+        "https://drive.google.com/uc?export=view&id=19GIRrBzi-uAM4F76z31U3UUnhA_xpFj2"
+      ]
+    },
+    {
+      "id": "saree_1007",
+      "description": "Women Lehnga style Olive Green saree and Purple shaded beautifully embroidered saree",
+      "price": 800,
+      "sellprice": 9000,
+      "category": "clothes",
+      "subCategory": "ethnicWear",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=1yJ3PH3Bh9muq8OiqeF8Sppz_9gMCWD60",
+        "https://drive.google.com/uc?export=view&id=1JewAGZUAFnb0jWl6BRPVUbyumqabbs-b",
+        "https://drive.google.com/uc?export=view&id=1_4GSunI1hRICDl0YEYo4MZ-xOmuqy7Cb"
+      ]
+    },
+    {
+      "id": "gown2",
+      "description": "ethnicWear2",
+      "price": 1000,
+      "category": "clothes",
+      "subCategory": "ethnicWear",
+      "images": ["/res/images/Gown2_1.jpg", "/res/images/Gown2_2.jpg"]
+    },
+    {
+      "id": "gown3",
+      "description": "ethnicWear3",
+      "price": 1000,
+      "category": "clothes",
+      "subCategory": "ethnicWear",
+      "images": ["/res/images/Gown3_1.jpg", "/res/images/Gown3_2.jpg"]
+    },
+    {
+      "id": "gown4",
+      "description": "ethnicWear4",
+      "price": 1000,
+      "category": "clothes",
+      "subCategory": "ethnicWear",
+      "images": ["/res/images/Gown3_1.jpg", "/res/images/Gown3_2.jpg"]
+    },
+    {
+      "id": "gown5",
+      "description": "ethnicWear5",
+      "price": 1000,
+      "category": "clothes",
+      "subCategory": "ethnicWear",
+      "images": ["/res/images/Gown3_1.jpg", "/res/images/Gown3_2.jpg"]
+    },
+    {
+      "id": "fusion1",
+      "description": "fusionWear1",
+      "price": 1000,
+      "category": "clothes",
+      "subCategory": "fusionWear",
+      "images": ["/res/images/fusion1_1.jpg", "/res/images/fusion1_2.jpg"]
+    },
+    {
+      "id": "fusion2",
+      "description": "fusionWear1",
+      "price": 1000,
+      "category": "clothes",
+      "subCategory": "fusionWear",
+      "images": ["/res/images/fusion2_1.jpg", "/res/images/fusion2_2.jpg"]
+    },
+    {
+      "id": "western1",
+      "description": "westernWear1",
+      "price": 1000,
+      "category": "clothes",
+      "subCategory": "westernWear",
+      "images": [
+        "/res/images/western1_1.jpg",
+        "/res/images/western1_2.jpg",
+        "/res/images/western1_3.jpg"
+      ]
+    },
+    {
+      "id": "western2",
+      "description": "westernWear1",
+      "price": 1000,
+      "category": "clothes",
+      "subCategory": "westernWear",
+      "images": ["/res/images/western2_1.jpg", "/res/images/western2_2.jpg"]
+    },
+    {
+      "id": "Earings_1001",
+      "description": "Gold toned circles earings",
+      "price": 1000,
+      "category": "accessories",
+      "subCategory": "earings",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=1NHSX9n_nQWR-iCLdZT5f-V5Y8CswYCel",
+        "https://drive.google.com/uc?export=view&id=1d3Np6iwFsfG56qjnqlG_oWsTGkg98v1E",
+        "https://drive.google.com/uc?export=view&id=18cj0k92peakxxxYwJBFCuY9fj5un6eHP"
+      ]
+    },
+    {
+      "id": "Earings_1002",
+      "description": "Silver Toned Geometric Drop Earrings",
+      "price": 1000,
+      "category": "accessories",
+      "subCategory": "earings",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=1q_WckIP8NA8O0f5xrs__inXAHbg75FnB",
+        "https://drive.google.com/uc?export=view&id=1NougM2RZEIAZJPcDyTn79dtpnfGvA-oh",
+        "https://drive.google.com/uc?export=view&id=1jJvYEr8VSSVkRoUoch1aOuRRF3mRro-S"
+      ]
+    },
+    {
+      "id": "Earings_1003",
+      "description": "Pink Geometric Drop Earrings",
+      "price": 1000,
+      "category": "accessories",
+      "subCategory": "earings",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=1YwztHM62yUyHRJgxAnbaO1B74U9yVCL4",
+        "https://drive.google.com/uc?export=view&id=1tDetvpOK9647rVtnb_ln100XGHX5x29Q",
+        "https://drive.google.com/uc?export=view&id=1VuJhdQXuIXSw1GaojXMJwU3nMHO0ghWt",
+        "https://drive.google.com/uc?export=view&id=1fkx2fuwpAXkAFvVeih8--tLoe3MDc7z6"
+      ]
+    },
+    {
+      "id": "jewellery_set_1001",
+      "description": "Gold toned circles earings",
+      "price": 1001,
+      "category": "accessories",
+      "subCategory": "jewellery_set",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=1JZZIQ-naxRYlUPtEsQrjCWiZGOf_THAo",
+        "https://drive.google.com/uc?export=view&id=10Bmouf6mqYF2zXs517uamSs0nQCpBolm",
+        "https://drive.google.com/uc?export=view&id=1aTyt64xPWQdlprcxs57uIqmpSRFK4srQ",
+        "https://drive.google.com/uc?export=view&id=10QyYfDCZulKLNcC9w4lQbZ65EwU8YwO5",
+        "https://drive.google.com/uc?export=view&id=1lnoEuaXkD0Xl9gImXrCBTRMH72Ny4upm"
+      ]
+    },
+    {
+      "id": "jewellery_set_1002",
+      "description": "Gold toned circles earings",
+      "price": 1002,
+      "category": "accessories",
+      "subCategory": "jewellery_set",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=1l38swleSC-IRTu08INWLcQDuSsJhClak",
+        "https://drive.google.com/uc?export=view&id=13fOEnGnw-ADwa5y5DNHGWBRrbzmuSNZM",
+        "https://drive.google.com/uc?export=view&id=1AkXRppfOwL27rgRwM5OWrof-6Pg1NLp4",
+        "https://drive.google.com/uc?export=view&id=1yTQCgMN8CRH7r8MkrUPAz5r_Kf7_L7Nz"
+      ]
+    },
+    {
+      "id": "jewellery_set_1003",
+      "description": "Gold toned circles earings",
+      "price": 1003,
+      "category": "accessories",
+      "subCategory": "jewellery_set",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=1jEvlq_piDEvMWLJoH6z27dXc_Xftskkb",
+        "https://drive.google.com/uc?export=view&id=1OI0akEMlf68b97hH9upK39mKDR0kdu04",
+        "https://drive.google.com/uc?export=view&id=1SA9VK9V7bciHS8Lj5YXXBGIYh9rniNgC",
+        "https://drive.google.com/uc?export=view&id=1H2fUyO6vGXi8PP7V0SITD6IfFOyPsuO2",
+        "https://drive.google.com/uc?export=view&id=1jrQJEJR9mxT2uFtHCEAjMrRIjnOlh_-n"
+      ]
+    },
+    {
+      "id": "jewellery_set_1004",
+      "description": "Gold toned circles earings",
+      "price": 1004,
+      "category": "accessories",
+      "subCategory": "jewellery_set",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=13MhMPR8xckR_cmba6rPvtsBhK4ZbR4Iw",
+        "https://drive.google.com/uc?export=view&id=1ihQKi17nuQfLZV0ZVHbVf5cOSd58M40U",
+        "https://drive.google.com/uc?export=view&id=1q8ejlrhSt0Y_l6jF_jj7a9DKYLC15cxx",
+        "https://drive.google.com/uc?export=view&id=1uhlcjzw5_hergUsUldN7QC3Gl0_8d-Xn",
+        "https://drive.google.com/uc?export=view&id=1aghkhNi4yheU8KYwW4nAYf5XA_ZFRfEr",
+        "https://drive.google.com/uc?export=view&id=13ooZBYoAtLLyyxyoKSlH-UPtReed5uz7"
+      ]
+    },
+    {
+      "id": "necklace_1001",
+      "description": "Silver & Gold-Toned Oxidised Alloy Handcrafted Necklace",
+      "price": 100,
+      "category": "accessories",
+      "subCategory": "necklace",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=15V6wbn7ITtY4QfAe3LjpjKxfsj2rEhgA",
+        "https://drive.google.com/uc?export=view&id=1jORK2LEy14PbTh6SrPH0QWnZunSnOK6c",
+        "https://drive.google.com/uc?export=view&id=1Rdr1puv4LCDCsFqFwToWTS-OgOf7dTVo",
+        "https://drive.google.com/uc?export=view&id=1jeJ1qRU847LQBXthk8T-cXPmD3fS5S9D"
+      ]
+    },
+    {
+      "id": "necklace_1002",
+      "description": "Silver & Gold-Toned Oxidised Alloy Handcrafted Necklace",
+      "price": 100,
+      "category": "accessories",
+      "subCategory": "necklace",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=1OaPhl0Ny9mAM8BGLcpU2GETCxArtwm2c",
+        "https://drive.google.com/uc?export=view&id=1xT4Fziwzbf25ikYJjwpqTsITgDbkzlFM",
+        "https://drive.google.com/uc?export=view&id=1xeJdmHOpm2N6nVJyMRPqeBhrbIYfxtOK"
+      ]
+    },
+    {
+      "id": "necklace_1003",
+      "description": "Silver & Gold-Toned Oxidised Alloy Handcrafted Necklace",
+      "price": 100,
+      "category": "accessories",
+      "subCategory": "necklace",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=1Q6gKItn2RR9ivJyrPBLSaOZ9mAKFK3_H",
+        "https://drive.google.com/uc?export=view&id=1GiM_S282T3zfBp_urKpRqWEnYZlurzzr",
+        "https://drive.google.com/uc?export=view&id=1_Ghw8Np4pnxs-zycenBdH1uZ5vG9b2-W"
+      ]
+    },
+    {
+      "id": "necklace_1004",
+      "description": "Silver & Gold-Toned Oxidised Alloy Handcrafted Necklace",
+      "price": 100,
+      "category": "accessories",
+      "subCategory": "necklace",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=11tIUwH0v3riryaqCCNweGB7Kjmz6mRBJ",
+        "https://drive.google.com/uc?export=view&id=1SKS_Q-4jMk5nKlijpFAsQMDhEj5C4Ftk",
+        "https://drive.google.com/uc?export=view&id=1LRVMEPbjtW_rirtZX5StvcPwPkh8d5ew"
+      ]
+    },
+    {
+      "id": "necklace_1005",
+      "description": "Silver & Gold-Toned Oxidised Alloy Handcrafted Necklace",
+      "price": 100,
+      "category": "accessories",
+      "subCategory": "necklace",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=1m35__LwjCFP2rhsQvrFZC4eigpUmCCqP",
+        "https://drive.google.com/uc?export=view&id=1J_0yR5lwRHa_YHCdO_JVqWC5mRwRqgp6",
+        "https://drive.google.com/uc?export=view&id=1go0aEKsij9o3LvnnKa9r1c-fb1E3SZNH"
+      ]
+    },
+    {
+      "id": "necklace_1006",
+      "description": "Silver & Gold-Toned Oxidised Alloy Handcrafted Necklace",
+      "price": 100,
+      "category": "accessories",
+      "subCategory": "necklace",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=1HNYCnDcqUJTutjh44tMAqHpyO0GV8xbm",
+        "https://drive.google.com/uc?export=view&id=139crEcR2XxN-kJogV7tYWXsdAtYpdP7X",
+        "https://drive.google.com/uc?export=view&id=1DkvgJPi7jjdzsC5Xtt13VWtRiH5sjmqw"
+      ]
+    },
+    {
+      "id": "necklace_1007",
+      "description": "Silver & Gold-Toned Oxidised Alloy Handcrafted Necklace",
+      "price": 100,
+      "category": "accessories",
+      "subCategory": "necklace",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=1tzI1QIP69kqmm1TDohd2AD4_eQXLxrE5",
+        "https://drive.google.com/uc?export=view&id=1n4Vx_6Won_fSH7astpFcaLTkDiFuxSrN",
+        "https://drive.google.com/uc?export=view&id=1mcsfhaXly7zLVk5DMh01lp_oypwQKiCu"
+      ]
+    },
+    {
+      "id": "necklace_1008",
+      "description": "Silver & Gold-Toned Oxidised Alloy Handcrafted Necklace",
+      "price": 100,
+      "category": "accessories",
+      "subCategory": "necklace",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=1gWECwDq-pRxu_Ws5qv_4VTg4moTEPRyg",
+        "https://drive.google.com/uc?export=view&id=1jnUk3fdWMf8XuZ3fT8KTTMBwu5WZ82uy",
+        "https://drive.google.com/uc?export=view&id=1q8BciuxTU7IGS7KKUTVek-HHBUPlJays"
+      ]
+    },
+    {
+      "id": "necklace_1009",
+      "description": "Silver & Gold-Toned Oxidised Alloy Handcrafted Necklace",
+      "price": 100,
+      "category": "accessories",
+      "subCategory": "necklace",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=1Bfstaxa3r0lpVPbElASsvWsKnE6EJfRI",
+        "https://drive.google.com/uc?export=view&id=1Fdsc4qU4pfJLrVMCdbUeCq4tnaG3t4zz",
+        "https://drive.google.com/uc?export=view&id=1oh4KbwrYU8c9tOkhpYQ72cEQXZwrx5R5",
+        "https://drive.google.com/uc?export=view&id=1SZyCfgc0-fRFUyNsYKIA1BH1EOfczrbk"
+      ]
+    },
+    {
+      "id": "maangtika_1001",
+      "description": "Gold-Toned Green and Teal Necklace",
+      "price": 100,
+      "category": "accessories",
+      "subCategory": "maang_tika",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=1G4hJRbw_VZKDcwUHr65Bno1O2kH9Nv8H"
+      ]
+    },
+    {
+      "id": "maangtika_1002",
+      "description": "Gold-Toned Green and Teal Necklace",
+      "price": 100,
+      "category": "accessories",
+      "subCategory": "maang_tika",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=1Y7X_ks7p8cJJAHPtfUBw6DvMxlIRerbI",
+        "https://drive.google.com/uc?export=view&id=1txEj6RIBvAHB-LFh9bCrm9RE-teml4nE",
+        "https://drive.google.com/uc?export=view&id=1WYuf_zPOVzdFDHuDJevkVComd_xGITum",
+        "https://drive.google.com/uc?export=view&id=1UWLQKzR2RbW27QpaH88jh-sLbDoCuu3N"
+      ]
+    }
+  ]
+}
