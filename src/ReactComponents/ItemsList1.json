@@ -39,7 +39,7 @@
     {
       "id": "3000a",
       "description": "Pampers Diaper",
-      "price": 400,
+      "price": [400],
       "qty": "0",
       "category": "babyEssentials",
       "size": ["xl"],
@@ -48,7 +48,7 @@
     {
       "id": "3000b",
       "description": "Pampers Diaper",
-      "price": 600,
+      "price": [600],
       "qty": "0",
       "category": "babyEssentials",
       "size": ["xxl"],

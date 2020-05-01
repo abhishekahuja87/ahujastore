@@ -131,7 +131,7 @@ class HeaderAndSider extends Component {
             }}
           >
             <div className="logo" onClick={this.goToHome}>
-              Ahuja Store
+              Ahuja Collection
             </div>
             <Menu
               theme="dark"
@@ -435,7 +435,7 @@ class HeaderAndSider extends Component {
           <Form.Item
             style={{ marginBottom: "1%" }}
             name={["user", "address"]}
-            label="address"
+            label="Address"
           >
             <Input.TextArea />
           </Form.Item>
@@ -443,7 +443,7 @@ class HeaderAndSider extends Component {
           <Form.Item
             // style={{ marginBottom: "1%" }}
             name={["user", "notes"]}
-            label="notes"
+            label="Notes"
           >
             <Input.TextArea />
           </Form.Item>
@@ -615,7 +615,7 @@ class HeaderAndSider extends Component {
                 <span style={{ marginLeft: "2%" }}>
                   Qty:
                   <InputNumber
-                    style={{ width: "20%" }}
+                    style={{ width: "20%", margin: "0 1%" }}
                     min={1}
                     max={10}
                     // defaultValue={

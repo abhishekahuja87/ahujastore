@@ -13,11 +13,7 @@ import {
 } from "antd";
 
 import itemsData from "./ItemsList1.json";
-import {
-  EditOutlined,
-  EllipsisOutlined,
-  SettingOutlined
-} from "@ant-design/icons";
+import { ShoppingCartOutlined } from "@ant-design/icons";
 
 class Temp extends Component {
   constructor(props) {
@@ -87,6 +83,7 @@ class Temp extends Component {
                   style={{ margin: "3%" }}
                   actions={[
                     <Button
+                      icon={<ShoppingCartOutlined />}
                       disabled={
                         ((abc = this.state.cartItems.filter(cartItem => {
                           return cartItem.id === item.id ? cartItem : undefined;

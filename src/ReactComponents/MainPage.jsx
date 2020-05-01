@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Alert, Row, Col, Button } from "antd";
-import { UnorderedListOutlined } from "@ant-design/icons";
+import { ShoppingCartOutlined } from "@ant-design/icons";
 // import MyCarousel from "./MyCarousel";
 // import MyTimeline from "./MyTimeline";
 
@@ -20,23 +20,26 @@ class MainPage extends Component {
       >
         <Row
           style={{
-            backgroundColor: "black",
-            height: "20vh",
+            backgroundColor: "grey",
+            height: "30vh",
             margin: "10px",
             fontSize: "30px"
           }}
         >
           <Col
             style={{
-              color: "white",
-              textTransform: "capitalize",
+              color: "#1890ff",
               textAlign: "center",
-              opacity: "0.9",
-              textShadow: "2px 2px #1890ff"
+              opacity: "0.9"
+              // textShadow: "2px 2px #1890ff"
             }}
             span={24}
           >
-            Ahuja Store Balod welcomes you
+            <p style={{ margin: 0, color: "black" }}>Namaste Balod!</p>
+            <p style={{ margin: 0, color: "black" }}>Order Now from</p>
+            <p style={{ margin: 0, color: "black", fontWeight: "bold" }}>
+              Ahuja Collection Online
+            </p>
           </Col>
         </Row>
         <Row
@@ -47,16 +50,13 @@ class MainPage extends Component {
             fontSize: "18px"
           }}
         >
-          <Col span={24}>
-            {" "}
-            Please click on the Button to Start ordering online
-          </Col>
+          <Col span={24}> Click on the Button to Start ordering online</Col>
         </Row>
         <Row>
           <Button
             onClick={this.orderOnline}
             type="primary"
-            icon={<UnorderedListOutlined />}
+            icon={<ShoppingCartOutlined />}
             size="large"
             style={{
               margin: "0 auto",
