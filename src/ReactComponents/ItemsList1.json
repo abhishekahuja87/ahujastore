@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "id": "1a",
+      "description": "Closeup Tooth Paste",
+      "price": [40],
+      "qty": "0",
+      "category": "dailyEssentials",
+      "size": ["50g"],
+      "subCategory": "ethnicWear"
+    },
+    {
+      "id": "1b",
+      "description": "Closeup Tooth Paste",
+      "price": [80],
+      "qty": "0",
+      "category": "dailyEssentials",
+      "size": ["100g"],
+      "subCategory": "ethnicWear"
+    },
+    {
+      "id": "2",
+      "description": "Sona Masoori Rice",
+      "price": 60,
+      "qty": "0",
+      "category": "kirana",
+      "size": ["500g", "1kg"],
+      "subCategory": "ethnicWear"
+    },
+    {
+      "id": "3",
+      "description": "Pampers Diaper",
+      "price": 400,
+      "qty": "0",
+      "category": "babyProducts",
+      "size": ["500g", "1kg"],
+      "subCategory": "ethnicWear"
+    }
+  ]
+}

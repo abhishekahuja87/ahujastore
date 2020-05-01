@@ -9,17 +9,17 @@ class App extends Component {
   }
 
   initializeAnalytics() {
-    ReactGA.initialize("UA-164601793-1");
-    ReactGA.pageview("/");
-    ReactGA.pageview("/HomePage");
-    ReactGA.pageview("/items/clothes/ethnicWear");
-    ReactGA.pageview("/items/clothes/fusionWear");
-    ReactGA.pageview("/items/clothes/westernWear");
-    ReactGA.pageview("/items/accessories/earings");
-    ReactGA.pageview("/items/accessories/jewellery_set");
-    ReactGA.pageview("/items/accessories/necklace");
-    ReactGA.pageview("/items/accessories/maang_tika");
-    ReactGA.pageview("/contact");
+    // ReactGA.initialize("UA-164601793-1");
+    // ReactGA.pageview("/");
+    // ReactGA.pageview("/HomePage");
+    // ReactGA.pageview("/items/clothes/ethnicWear");
+    // ReactGA.pageview("/items/clothes/fusionWear");
+    // ReactGA.pageview("/items/clothes/westernWear");
+    // ReactGA.pageview("/items/accessories/earings");
+    // ReactGA.pageview("/items/accessories/jewellery_set");
+    // ReactGA.pageview("/items/accessories/necklace");
+    // ReactGA.pageview("/items/accessories/maang_tika");
+    // ReactGA.pageview("/contact");
   }
 
   render() {

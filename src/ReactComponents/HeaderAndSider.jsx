@@ -11,7 +11,9 @@ import {
   Input,
   DatePicker,
   message,
-  Avatar
+  Avatar,
+  InputNumber,
+  Divider
 } from "antd";
 import {
   CrownOutlined,
@@ -25,24 +27,26 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import emailjs from "emailjs-com";
 import MainPage from "./MainPage";
 import Contact from "./Contact";
+import ItemsList1 from "./ItemsList1";
 import {
   _allWishListedItemsLocalStorage,
   _allCartItemsLocalStorage
 } from "./Constants";
+import Temp from "./Temp";
 
 class HeaderAndSider extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      wishListedItems:
-        JSON.parse(localStorage.getItem(_allWishListedItemsLocalStorage)) || [],
       cartItems:
         JSON.parse(localStorage.getItem(_allCartItemsLocalStorage)) || [],
       showCart: false,
       showWishlist: false,
       showChildrenDrawer: false,
       totalAmount: 0,
-      startDate: ""
+      startDate: "",
+      // syntx inside arr- { id: "", qty: -1 }
+      idToQtymap: []
     };
   }
 
@@ -62,7 +66,7 @@ class HeaderAndSider extends Component {
             visible={this.state.showCart}
           >
             {this.state.cartItems.map(item => {
-              total = total + item.price + item.price * 5;
+              total = total + item.price[0] * item.qty;
               return this.getCartViewItem(item);
             })}
             <div
@@ -111,43 +115,6 @@ class HeaderAndSider extends Component {
       );
     }
 
-    if (this.state.showWishlist === true) {
-      return (
-        <React.Fragment>
-          {this.getHeaderAndSiderPane()}
-          <Drawer
-            title={"Wishlist(" + this.state.wishListedItems.length + ")"}
-            width={window.innerWidth > 600 ? "30%" : "100%"}
-            placement="right"
-            closable={true}
-            onClose={this.onWishlistClose}
-            visible={this.state.showWishlist}
-          >
-            {this.state.wishListedItems.map(item => {
-              return this.getCartWishlistItem(item);
-            })}
-            <div
-              style={{
-                position: "absolute",
-                bottom: 0,
-                width: "100%",
-                borderTop: "1px solid #e8e8e8",
-                padding: "10px 16px",
-                textAlign: "right",
-                left: 0,
-                background: "#fff",
-                borderRadius: "0 0 4px 4px"
-              }}
-            >
-              <Button onClick={this.onWishlistClose} type="primary">
-                OK
-              </Button>
-            </div>
-          </Drawer>
-        </React.Fragment>
-      );
-    }
-
     return this.getHeaderAndSiderPane();
   }
 
@@ -164,7 +131,7 @@ class HeaderAndSider extends Component {
             }}
           >
             <div className="logo" onClick={this.goToHome}>
-              CadgeIt
+              Ahuja Store
             </div>
             <Menu
               theme="dark"
@@ -174,7 +141,7 @@ class HeaderAndSider extends Component {
               <Menu.Item key="nav-cart" onClick={this.showCartDrawer}>
                 <span style={{ margin: "0px" }}>
                   <Badge
-                    style={{ backgroundColor: "yellow", color: "black" }}
+                    style={{ backgroundColor: "#1890ff", color: "black" }}
                     count={this.state.cartItems.length}
                   >
                     <ShoppingOutlined style={{ fontSize: "25px" }} />
@@ -199,86 +166,8 @@ class HeaderAndSider extends Component {
               collapsedWidth="0"
             >
               <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
-                <SubMenu
-                  title={
-                    <span>
-                      <SkinOutlined />
-                      Clothes For Her
-                    </span>
-                  }
-                >
-                  <Menu.Item
-                    style={{ color: "yellow" }}
-                    key="cat1opt1"
-                    onClick={this.clothes_ethnicWear}
-                  >
-                    Ethnic Wear
-                  </Menu.Item>
-                  <Menu.Item
-                    style={{ color: "yellow" }}
-                    key="cat1opt2"
-                    onClick={this.clothes_fusionWear}
-                  >
-                    Fusion Wear
-                  </Menu.Item>
-                  <Menu.Item
-                    style={{ color: "yellow" }}
-                    key="cat1opt3"
-                    onClick={this.clothes_westernWear}
-                  >
-                    Western Wear
-                  </Menu.Item>
-                </SubMenu>
-                <SubMenu
-                  title={
-                    <span>
-                      <CrownOutlined />
-                      Jewellery
-                    </span>
-                  }
-                >
-                  <Menu.Item
-                    style={{ color: "yellow" }}
-                    key="cat2opt1"
-                    onClick={this.accessories_earings}
-                  >
-                    Earrings
-                  </Menu.Item>
-                  <Menu.Item
-                    style={{ color: "yellow" }}
-                    key="cat2opt2"
-                    onClick={this.accessories_jewellery_set}
-                  >
-                    Jewellery Set
-                  </Menu.Item>
-                  <Menu.Item
-                    style={{ color: "yellow" }}
-                    key="cat2opt3"
-                    onClick={this.accessories_necklace}
-                  >
-                    Necklace
-                  </Menu.Item>
-                  <Menu.Item
-                    style={{ color: "yellow" }}
-                    key="cat2opt4"
-                    onClick={this.accessories_maang_tika}
-                  >
-                    Maang Tika
-                  </Menu.Item>
-                </SubMenu>
                 <Menu.Item key="2" onClick={this.contactPage}>
                   Contact
-                </Menu.Item>
-                <Menu.Item key="nav-wishlist" onClick={this.showWishlistDrawer}>
-                  <span style={{ margin: "0px", lineHeight: "60px" }}>
-                    <Badge
-                      showZero
-                      style={{ backgroundColor: "yellow", color: "black" }}
-                      count={this.state.wishListedItems.length}
-                    >
-                      <HeartOutlined style={{ fontSize: "25px" }} />
-                    </Badge>
-                  </span>
                 </Menu.Item>
               </Menu>
             </Sider>
@@ -287,8 +176,23 @@ class HeaderAndSider extends Component {
           <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Switch>
               <Route path="/" exact component={MainPage} />
+              {/* <Route path="/list_items" component={Temp} /> */}
               <Route path="/contact" component={Contact} />
               <Route
+                path="/list_items"
+                render={props => (
+                  <Temp
+                    {...props}
+                    // wishListedItems={this.state.wishListedItems}
+                    cartItems={this.state.cartItems}
+                    // addToWishList={this.addToWishList}
+                    // removeFromWishlist={this.removeFromWishlist}
+                    addToCart={this.addToCart}
+                  />
+                )}
+              />
+
+              {/* <Route
                 path="/items/:category/:subCategory"
                 // component={Items}
                 render={props => (
@@ -300,9 +204,8 @@ class HeaderAndSider extends Component {
                     addToWishList={this.addToWishList}
                     removeFromWishlist={this.removeFromWishlist}
                     addToCart={this.addToCart}
-                  />
-                )}
-              />
+                  /> */}
+              {/* )} /> */}
             </Switch>
           </BrowserRouter>
         </Layout>
@@ -314,9 +217,9 @@ class HeaderAndSider extends Component {
     // console.log("place order click");
 
     var templateParams = {
-      to_name: "Neelima",
-      from_name: "Abhishek",
-      from_email: "abhishek.ahuja87@gmail.com",
+      to_name: "Ahuja Collection",
+      from_name: "EmailJs Ahuja Collection",
+      from_email: "ahujacollectiononline@gmail.com",
       message_html: "Check this out!"
     };
 
@@ -330,7 +233,7 @@ class HeaderAndSider extends Component {
     emailjs
       .send(
         "default_service",
-        "template_JC89zWij",
+        "template_yFi3Lwta",
         templateParams,
         "user_vxi82ZFH1k9v1mk8zd6Tm"
       )
@@ -343,21 +246,21 @@ class HeaderAndSider extends Component {
         }
       );
 
-    emailjs
-      .send(
-        "default_service",
-        "sent_to_customer",
-        sent_to_customer_template,
-        "user_vxi82ZFH1k9v1mk8zd6Tm"
-      )
-      .then(
-        function(response) {
-          // console.log("SUCCESS!", response.status, response.text);
-        },
-        function(error) {
-          // console.log("FAILED...", error);
-        }
-      );
+    // emailjs
+    //   .send(
+    //     "default_service",
+    //     "sent_to_customer",
+    //     sent_to_customer_template,
+    //     "user_vxi82ZFH1k9v1mk8zd6Tm"
+    //   )
+    //   .then(
+    //     function(response) {
+    //       // console.log("SUCCESS!", response.status, response.text);
+    //     },
+    //     function(error) {
+    //       // console.log("FAILED...", error);
+    //     }
+    //   );
   };
 
   onFinish = values => {
@@ -365,7 +268,20 @@ class HeaderAndSider extends Component {
     this.setState({ showCart: false, showChildrenDrawer: false });
     let itemsStr = "";
     items.forEach(i => {
-      itemsStr = itemsStr + i.description + "(id-" + i.id + ")";
+      itemsStr =
+        itemsStr +
+        i.description +
+        ", " +
+        i.size[0] +
+        ", qty: " +
+        i.qty +
+        ", price: Rs" +
+        i.price[0] +
+        ", total: Rs" +
+        i.price[0] * i.qty +
+        " (id-" +
+        i.id +
+        ")\n";
       itemsStr = itemsStr + ",";
     });
     let custName = values.name;
@@ -375,7 +291,7 @@ class HeaderAndSider extends Component {
     // let messageToCust = "to be decided";
     let notesFromCust = values.user.notes;
 
-    let ownerName = "CadgeIt";
+    let ownerName = "Ahuja Collection Online";
     // let ownerEmail = "cadgeit@gmail.com";
 
     var send_to_owner_template = {
@@ -384,10 +300,9 @@ class HeaderAndSider extends Component {
       from_email: custEmail,
       from_contactno: custContactNo,
       address: custAddress,
-      message_html: "",
       notes: notesFromCust,
       order_items: itemsStr,
-      start_date: this.state.startDate
+      total_amount: this.state.totalAmount
     };
 
     var send_to_customer_template = {
@@ -403,45 +318,62 @@ class HeaderAndSider extends Component {
       owner_name: ownerName
     };
 
-    this.removeAllFromCart();
+    // this.removeAllFromCart();
+    let isSucc = false;
+    let msg = "Placing Order...";
     emailjs
       .send(
         "default_service",
-        "template_JC89zWij",
+        "template_yFi3Lwta",
         send_to_owner_template,
-        "user_vxi82ZFH1k9v1mk8zd6Tm"
+        "user_35QD7IUgphBeas7QVYFOM"
       )
       .then(
         response => {
           this.removeAllFromCart();
-          message.success(
-            "The email with your order details has been sent. You will receive an email for the same with details.",
-            10
-          );
+          // message.success(
+          //   "The email with your order details has been sent. You will receive an email for the same with details.",
+          //   10
+          // );
+          isSucc = true;
+          msg = "Order Placed. We will contact you soon.";
         },
         error => {
-          message.error(
-            "The order details could not be sent. please try again, " + error,
-            10
-          );
+          // message.error(
+          //   "The order details could not be sent. please try again, " +
+          //     error.text,
+          //   10
+          // );
+          isSucc = false;
+          msg =
+            "Order could not be placed, " + error.text + ", please retry later";
         }
       );
 
-    emailjs
-      .send(
-        "default_service",
-        "sent_to_customer",
-        send_to_customer_template,
-        "user_vxi82ZFH1k9v1mk8zd6Tm"
-      )
-      .then(
-        function(response) {
-          // console.log("SUCCESS!", response.status, response.text);
-        },
-        function(error) {
-          // console.log("FAILED...", error);
-        }
-      );
+    message
+      .loading(msg, 5.5)
+      .then(() => {
+        if (isSucc) message.success(msg, 10);
+      })
+      .then(() => {
+        if (isSucc === false) message.error(msg, 10);
+      });
+
+    // emailjs
+    //   .send(
+    //     "default_service",
+    //     "sent_to_customer",
+    //     send_to_customer_template,
+    //     "user_vxi82ZFH1k9v1mk8zd6Tm"
+    //   )
+    //   .then(
+    //     function(response) {
+    //       // console.log("SUCCESS!", response.status, response.text);
+    //     },
+    //     function(error) {
+    //       // console.log("FAILED...", error);
+    //     }
+    //   );
   };
 
   onChange = (date, dateString) => {
@@ -481,22 +413,16 @@ class HeaderAndSider extends Component {
           // onFinishFailed={this.onFinishFailed}
         >
           <Form.Item
+            style={{ marginBottom: "1%" }}
             label="Name"
             name="name"
-            rules={[{ required: true, message: "Please input your username!" }]}
+            rules={[{ required: true, message: "Please input your name!" }]}
           >
             <Input />
           </Form.Item>
 
           <Form.Item
-            label="Email"
-            name="email"
-            rules={[{ required: true, message: "Please input your email!" }]}
-          >
-            <Input />
-          </Form.Item>
-
-          <Form.Item
+            style={{ marginBottom: "1%" }}
             label="Contact No"
             name="contactno"
             rules={[
@@ -506,22 +432,22 @@ class HeaderAndSider extends Component {
             <Input />
           </Form.Item>
 
-          <Form.Item name={["user", "address"]} label="address">
-            <Input.TextArea />
-          </Form.Item>
-
-          <Form.Item name={["user", "notes"]} label="notes">
+          <Form.Item
+            style={{ marginBottom: "1%" }}
+            name={["user", "address"]}
+            label="address"
+          >
             <Input.TextArea />
           </Form.Item>
 
           <Form.Item
-            name={["date"]}
-            label="date"
-            // rules={[{ required: true, message: "Please Select a Date!" }]}
+            // style={{ marginBottom: "1%" }}
+            name={["user", "notes"]}
+            label="notes"
           >
-            <DatePicker onChange={this.onChange} />
-            <div>End Date will be 3 days from the Start Date</div>
+            <Input.TextArea />
           </Form.Item>
+
           <Form.Item {...tailLayout}>
             <Button
               type="primary"
@@ -621,13 +547,41 @@ class HeaderAndSider extends Component {
     // console.log("changed", value);
   }
 
+  onQtyChange = (e, item) => {
+    console.log(e, item);
+    item.qty = e;
+    let idToQtymapL = this.state.idToQtymap;
+    let Obj = { id: item.id, qty: e };
+    let filteredItm = idToQtymapL.filter(it => {
+      if (it.id === item.id) return it;
+    });
+    filteredItm.length === 0 ? idToQtymapL.push(Obj) : (filteredItm[0].qty = e);
+
+    this.setState({ idToQtymap: idToQtymapL });
+    // this.removeFromCart(item);
+    // this.addToCart(item);
+    this.updateCartQty(item);
+  };
+
   getCartViewItem = item => {
+    // let filteredITems =
+    //   this.state.idToQtymap.length > 0 &&
+    //   this.state.idToQtymap.filter(idsObj => {
+    //     if (idsObj.id === item.id) return idsObj;
+    //   });
+
+    // let itemTotalPrice =
+    //   filteredITems === false
+    //     ? item.price[0]
+    //     : filteredITems[0].qty * item.price[0];
+
+    let itemTotalPrice = item.qty * item.price[0];
     const { Meta } = Card;
     return (
       <React.Fragment>
         <Card
           size="small"
-          title={item.description}
+          title={item.description + " " + item.size[0]}
           extra={
             <Button
               onClick={e => this.removeFromCart(item)}
@@ -640,18 +594,6 @@ class HeaderAndSider extends Component {
           style={{ width: "100%" }}
         >
           <Meta
-            avatar={
-              <Avatar
-                style={{
-                  // width: "15%",
-                  height: "58px"
-                  // objectFit: "fit"
-                }}
-                shape="square"
-                size="large"
-                src={item.images[0]}
-              />
-            }
             title={
               <React.Fragment>
                 <span
@@ -659,19 +601,44 @@ class HeaderAndSider extends Component {
                     margin: "0"
                   }}
                 >
-                  Rs {item.price + item.price * 5}
+                  Rs{" " + item.price[0]}
+                  {/* {
+                    ((filteredITems =
+                      this.state.idToQtymap.length > 0 &&
+                      this.state.idToQtymap.filter(idsObj => {
+                        if (idsObj === item.id) return idsObj;
+                      })),
+                    filteredITems.length === 0 ? item.price[0] : item.price[0])
+                  } */}
+                </span>
+                <Divider type="vertical" />
+                <span style={{ marginLeft: "2%" }}>
+                  Qty:
+                  <InputNumber
+                    style={{ width: "20%" }}
+                    min={1}
+                    max={10}
+                    // defaultValue={
+                    //   filteredITems.length === 0 ||
+                    //   filteredITems[0] === undefined
+                    //     ? 1
+                    //     : filteredITems[0].qty
+                    // }
+
+                    defaultValue={item.qty}
+                    onChange={e => this.onQtyChange(e, item)}
+                  />
+                  = {itemTotalPrice}
                 </span>
               </React.Fragment>
             }
-            description={
-              <React.Fragment>
-                <span
-                // style={{ fontSize: "15px", marginLeft: "5px" }}
-                >
-                  (Rent: {item.price}, Deposit: {item.price * 5})
-                </span>
-              </React.Fragment>
-            }
+            // description={
+            //   <React.Fragment>
+            //     <span>
+            //       (Rent: {item.price}, Deposit: {item.price * 5})
+            //     </span>
+            //   </React.Fragment>
+            // }
           />
         </Card>
         <br />
@@ -751,6 +718,13 @@ class HeaderAndSider extends Component {
       _allWishListedItemsLocalStorage,
       JSON.stringify(this.state.wishListedItems)
     );
+  };
+
+  updateCartQty = item => {
+    let cartItemsL = this.state.cartItems;
+
+    //store to local storage
+    localStorage.setItem(_allCartItemsLocalStorage, JSON.stringify(cartItemsL));
   };
 
   addToCart = item => {

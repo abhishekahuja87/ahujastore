@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { Alert } from "antd";
-import MyCarousel from "./MyCarousel";
-import MyTimeline from "./MyTimeline";
+import { Alert, Row, Col, Button } from "antd";
+import { UnorderedListOutlined } from "@ant-design/icons";
+// import MyCarousel from "./MyCarousel";
+// import MyTimeline from "./MyTimeline";
 
 class MainPage extends Component {
   constructor(props) {
@@ -14,39 +15,66 @@ class MainPage extends Component {
       <div
         style={{
           width: window.innerWidth > 600 ? "88%" : "100%",
-          backgroundColor: "lightyellow"
+          backgroundColor: "lightGrey"
         }}
       >
-        <div>
-          <MyCarousel />
-          <div
+        <Row
+          style={{
+            backgroundColor: "black",
+            height: "20vh",
+            margin: "10px",
+            fontSize: "30px"
+          }}
+        >
+          <Col
             style={{
-              fontSize: "30px",
-              fontWeight: "bold",
-              padding: "20px 0px 20px 0px",
-              textAlign: "center"
+              color: "white",
+              textTransform: "capitalize",
+              textAlign: "center",
+              opacity: "0.9",
+              textShadow: "2px 2px #1890ff"
+            }}
+            span={24}
+          >
+            Ahuja Store Balod welcomes you
+          </Col>
+        </Row>
+        <Row
+          style={{
+            color: "black",
+            textAlign: "center",
+            margin: "10px",
+            fontSize: "18px"
+          }}
+        >
+          <Col span={24}>
+            {" "}
+            Please click on the Button to Start ordering online
+          </Col>
+        </Row>
+        <Row>
+          <Button
+            onClick={this.orderOnline}
+            type="primary"
+            icon={<UnorderedListOutlined />}
+            size="large"
+            style={{
+              margin: "0 auto",
+              backgroundColor: "black",
+              color: "white",
+              border: "none"
             }}
           >
-            How the Renting works
-          </div>
-
-          <span>
-            <MyTimeline />
-          </span>
-
-          <div style={{ marginBottom: "20px" }}>
-            <Alert
-              style={{ width: "70%", margin: "auto", marginTop: "40px" }}
-              message="Important Note"
-              description="We take Security Deposit to avoid any damage or theft of the product, please use the product as your own to make hassle free Deposit Refund"
-              type="info"
-              showIcon
-            />
-          </div>
-        </div>
+            Order Online
+          </Button>
+        </Row>
       </div>
     );
   }
+
+  orderOnline = () => {
+    window.location = "/list_items";
+  };
 }
 
 export default MainPage;

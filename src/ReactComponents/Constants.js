@@ -1,8 +1,11 @@
 // --------------Strings Externalization STARTS here-------------
 
-const _allWishListedItemsLocalStorage = "allWishListedItems3";
-const _allCartItemsLocalStorage = "allCartItems3";
+const _allWishListedItemsLocalStorage = "allWishListedItems3_as1";
+const _allCartItemsLocalStorage = "allCartItems3_as1";
 
+const _welcomeToahujaStoreOnline = "आहूजा ऑनलाइन स्टोर में आपका स्वागत है";
+const _ahujaStore = "आहूजा स्टोर";
+const _clickToOrderMsg = "ऑनलाइन ऑर्डर करने के लिए बटन पर क्लिक करें";
 // --------------Strings Externalization ENDS here-------------
 
 // --------------Functions START from here----------
