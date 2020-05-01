@@ -9,9 +9,9 @@ class App extends Component {
   }
 
   initializeAnalytics() {
-    // ReactGA.initialize("UA-164601793-1");
-    // ReactGA.pageview("/");
-    // ReactGA.pageview("/HomePage");
+    ReactGA.initialize("UA-165312624-1");
+    ReactGA.pageview("/");
+    ReactGA.pageview("/list_items");
     // ReactGA.pageview("/items/clothes/ethnicWear");
     // ReactGA.pageview("/items/clothes/fusionWear");
     // ReactGA.pageview("/items/clothes/westernWear");

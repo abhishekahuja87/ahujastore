@@ -1,7 +1,7 @@
 {
   "items": [
     {
-      "id": "1a",
+      "id": "1001a",
       "description": "Closeup Tooth Paste",
       "price": [40],
       "qty": "0",
@@ -10,7 +10,7 @@
       "subCategory": "ethnicWear"
     },
     {
-      "id": "1b",
+      "id": "1001b",
       "description": "Closeup Tooth Paste",
       "price": [80],
       "qty": "0",
@@ -19,21 +19,39 @@
       "subCategory": "ethnicWear"
     },
     {
-      "id": "2",
+      "id": "2000",
       "description": "Sona Masoori Rice",
-      "price": 60,
+      "price": [60],
       "qty": "0",
-      "category": "kirana",
-      "size": ["500g", "1kg"],
+      "category": "foodEssentials",
+      "size": ["1kg"],
       "subCategory": "ethnicWear"
     },
     {
-      "id": "3",
+      "id": "2001",
+      "description": "Toor Dal",
+      "price": [90],
+      "qty": "0",
+      "category": "foodEssentials",
+      "size": ["1kg"],
+      "subCategory": "ethnicWear"
+    },
+    {
+      "id": "3000a",
       "description": "Pampers Diaper",
       "price": 400,
       "qty": "0",
-      "category": "babyProducts",
-      "size": ["500g", "1kg"],
+      "category": "babyEssentials",
+      "size": ["xl"],
+      "subCategory": "ethnicWear"
+    },
+    {
+      "id": "3000b",
+      "description": "Pampers Diaper",
+      "price": 600,
+      "qty": "0",
+      "category": "babyEssentials",
+      "size": ["xxl"],
       "subCategory": "ethnicWear"
     }
   ]

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Card, Row, Col } from "antd";
 
+import { PhoneOutlined, WhatsAppOutlined } from "@ant-design/icons";
+
 class Contact extends Component {
   constructor(props) {
     super(props);
@@ -20,8 +22,10 @@ class Contact extends Component {
               backgroundColor: "lightYellow"
             }}
           >
-            <p>For any queries, Contact us at </p>{" "}
-            <p style={{ fontWeight: "bold" }}>cadgeit@gmail.com</p>
+            <p>For any queries, Contact us at </p>
+            <p style={{ fontWeight: "bold" }}>
+              <WhatsAppOutlined /> 9981072500 <PhoneOutlined />
+            </p>
           </Card>
         </Col>
         <Col span={window.innerWidth > 600 ? 9 : 2}></Col>

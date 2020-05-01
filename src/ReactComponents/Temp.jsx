@@ -115,13 +115,76 @@ class Temp extends Component {
             })}
           </TabPane>
           <TabPane tab="Food Essentials" key="2">
-            Content of Tab Pane 2
+            {itemsData.items.map(item => {
+              return item.category == "foodEssentials" ? (
+                // <span>{item.description}</span>
+
+                <Card
+                  style={{ margin: "3%" }}
+                  actions={[
+                    <Button
+                      disabled={
+                        ((abc = this.state.cartItems.filter(cartItem => {
+                          return cartItem.id === item.id ? cartItem : undefined;
+                        })),
+                        abc.length === 0 ? false : true)
+                      }
+                      type="primary"
+                      htmlType="submit"
+                      onClick={e => this.OnAddClicked(e, item)}
+                    >
+                      {abc.length === 0 ? "Add" : "Added"}
+                    </Button>
+                  ]}
+                >
+                  <Meta
+                    avatar={<Avatar>{item.description[0]}</Avatar>}
+                    title={item.description}
+                    description={
+                      <span>₹{item.price[0] + ", " + item.size[0]}</span>
+                    }
+                  />
+                </Card>
+              ) : (
+                <span></span>
+              );
+            })}
           </TabPane>
-          <TabPane tab="Baby Essentials" key="3">
-            Content of Tab Pane 3
-          </TabPane>
-          <TabPane tab="Baby Essentials" key="4">
-            Content of Tab Pane 3
+          <TabPane tab="baby Essentials" key="3">
+            {itemsData.items.map(item => {
+              return item.category == "babyEssentials" ? (
+                // <span>{item.description}</span>
+
+                <Card
+                  style={{ margin: "3%" }}
+                  actions={[
+                    <Button
+                      disabled={
+                        ((abc = this.state.cartItems.filter(cartItem => {
+                          return cartItem.id === item.id ? cartItem : undefined;
+                        })),
+                        abc.length === 0 ? false : true)
+                      }
+                      type="primary"
+                      htmlType="submit"
+                      onClick={e => this.OnAddClicked(e, item)}
+                    >
+                      {abc.length === 0 ? "Add" : "Added"}
+                    </Button>
+                  ]}
+                >
+                  <Meta
+                    avatar={<Avatar>{item.description[0]}</Avatar>}
+                    title={item.description}
+                    description={
+                      <span>₹{item.price[0] + ", " + item.size[0]}</span>
+                    }
+                  />
+                </Card>
+              ) : (
+                <span></span>
+              );
+            })}
           </TabPane>
         </Tabs>
       </Row>
