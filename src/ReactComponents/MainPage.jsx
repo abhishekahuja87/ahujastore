@@ -28,6 +28,7 @@ class MainPage extends Component {
         >
           <Col
             style={{
+              marginTop: "5%",
               color: "#1890ff",
               textAlign: "center",
               opacity: "0.9"
